@@ -206,7 +206,13 @@ export class PortfolioService {
       date: "Sept 2025 - Present",
       desc: "Currently working as an Associate Software Engineer focusing on building scalable financial technology solutions. Collaborating with product, QA, and design teams to deliver high-quality, production-ready applications. Contributing to enterprise-level frontend and backend systems with emphasis on performance, maintainability, and clean architecture.",
       skills: [
+        "AWS",
+        "Angular",
+        "Node.js",
         "Financial Technology",
+        "Digital Lending",
+        "TypeScript",
+        "Java",
         "Full Stack Development",
         "Team Collaboration",
         "Enterprise Systems",
@@ -265,7 +271,7 @@ export class PortfolioService {
       img: "assets/images/Sports Logo.png",
       role: "Technical Head",
       company: "Sports Committee, IIIT Kota",
-      date: "Feb 2023 - Present",
+      date: "Feb 2023 - March 2024",
       desc: "Working in the committee as tech head and handling the official website of sports club. I also contributed in making the website. Website is Deployed on Github.",
       skills: [
         "ReactJS",

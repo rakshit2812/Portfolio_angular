@@ -1,4 +1,4 @@
-import { Component, inject, signal, computed, ChangeDetectionStrategy } from '@angular/core';
+import { Component, inject, signal, ChangeDetectionStrategy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { trigger, state, style, transition, animate, stagger, query } from '@angular/animations';
 import { PortfolioService } from '../../services/portfolio.service';
@@ -40,24 +40,9 @@ import { Project } from '../../models/portfolio.models';
 export class ProjectsComponent {
   private portfolioService = inject(PortfolioService);
 
-  projects = this.portfolioService.projects;
-  selectedFilter = signal<'all' | 'web' | 'mobile'>('all');
+  allProjects = this.portfolioService.projects;
   selectedProject = signal<Project | null>(null);
   isModalOpen = signal(false);
-
-  filteredProjects = computed(() => {
-    const filter = this.selectedFilter();
-    if (filter === 'all') {
-      return this.projects();
-    }
-    return this.projects().filter(project => 
-      project.category?.toLowerCase() === filter
-    );
-  });
-
-  setFilter(filter: 'all' | 'web' | 'mobile') {
-    this.selectedFilter.set(filter);
-  }
 
   openProjectModal(project: Project) {
     this.selectedProject.set(project);

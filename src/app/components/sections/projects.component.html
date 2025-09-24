@@ -6,27 +6,8 @@
       Here are some of my recent projects.
     </p>
     
-    <!-- Filter Buttons (Optional) -->
-    <div class="filter-container" @fadeInUp>
-      <button class="filter-button"
-              [class.active]="selectedFilter() === 'all'"
-              (click)="setFilter('all')">
-        All Projects
-      </button>
-      <button class="filter-button"
-              [class.active]="selectedFilter() === 'web'"
-              (click)="setFilter('web')">
-        Web Apps
-      </button>
-      <button class="filter-button"
-              [class.active]="selectedFilter() === 'mobile'"
-              (click)="setFilter('mobile')">
-        Mobile Apps
-      </button>
-    </div>
-    
     <div class="projects-grid" @staggerProjects>
-      @for (project of filteredProjects(); track project.id) {
+      @for (project of allProjects(); track project.id) {
         <app-project-card 
           [project]="project"
           [index]="$index"
