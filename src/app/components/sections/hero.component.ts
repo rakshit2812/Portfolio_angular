@@ -95,7 +95,6 @@ export class HeroComponent implements OnInit {
       // Delete the current role
       await this.deleteText();
       
-      // Pause before typing next role
       await this.delay(this.pauseBeforeNext);
       
       currentIndex = (currentIndex + 1) % roles.length;
