@@ -98,7 +98,6 @@ export class HeroComponent implements OnInit {
       // Pause before typing next role
       await this.delay(this.pauseBeforeNext);
       
-      // Move to next role
       currentIndex = (currentIndex + 1) % roles.length;
       this.currentRoleIndex.set(currentIndex);
     }
